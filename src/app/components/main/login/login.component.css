@@ -1,0 +1,34 @@
+/* @import '../../../../assets/vendor/animate/animate.css';
+@import '../../../../assets/vendor/css-hamburgers/hamburgers.min.css';
+@import '../../../../assets/vendor/select2/select2.min.css';
+@import '../../../../assets/css/util.css';
+@import '../../../../assets/css/main.css'; */
+.card-signin {
+    border: 0;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  
+  .card-signin .card-body {
+    padding: 2rem;
+  }
+  
+  
+  a{
+    -webkit-transition: all 0.4s ;
+  }
+  
+
+  .txt3 {
+      text-align: center;
+    font-family: Ubuntu-Bold;
+    font-size: 15px;
+    color: #57b846;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
