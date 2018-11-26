@@ -11,6 +11,7 @@ import { LoginComponent } from './components/main/login/login.component';
 import { SignupComponent } from './components/main/signup/signup.component';
 import { UserComponent } from './components/main/user/user.component';
 import { DashboardComponent } from './components/main/dashboard/dashboard.component';
+import { AuthorComponent } from './components/main/author/author.component';
 // Route Configuration
 export const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'profile', component: UserComponent },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'author', component: AuthorComponent },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {useHash: true});
