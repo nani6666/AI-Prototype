@@ -1,12 +1,12 @@
-<app-header></app-header>
+<!-- <app-header></app-header>
 <div style="margin-top: 10px;" class="">
   <div class="row">
    <div class="col-md-2 " >
       <div class="card bg-dark text-light" style="height: 600px;">
-          <div class="card-header bg-light text-dark">
-            <a [routerLink]="['/dashboard']">
-              <span><i class="fa fa-compass"></i> Dashboard</span>
-            </a>
+          <div class="card-header bg-light">
+              <a [routerLink]="['/dashboard']">
+                <span><i class="fa fa-compass"></i> Dashboard</span>
+              </a>
             </div>
           <div class="card-body">
             
@@ -99,4 +99,111 @@
         </div>
     </div>
   </div>
-</div>
+</div> -->
+<app-header></app-header>
+<div id="overlay">
+    <div id="text">
+            <div class="row">
+              <div  class="col-md-12">
+                <div class="card bg-light text-dark" *ngIf="mainSection"  style="font-size: 30px;">
+                    <a style="font-size: 15px;" class="btn-link text-info float-left" [routerLink]="['/dashboard']"><i class="fa fa fa-tachometer" aria-hidden="true"></i>Dashboard</a>
+                  <div class="card-header text-center">
+                    <span class="text-danger"><i class="fa fa-book"></i> Novel</span>
+                  </div>
+                 <div class="card-body text-center">
+                   <div>
+                      <a class="btn-link text-info" (click)="callNewsection('new')" >
+                          New
+                     </a>
+                     </div>
+                     <div>
+                     <a class="btn-link text-info" (click)="callNewsection('submit')">
+                         Submitted
+                    </a>
+                   </div>
+                          
+                 </div>
+                </div>
+                <div class="card bg-light text-dark" *ngIf="newSection">
+                    <a class="btn-link text-info float-left" (click)="callNewsection('back')"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
+                    <div class="card-header text-center">
+                      <span class="text-danger"><i class="fa fa-user-circle"></i> New</span>
+                      
+                    </div>
+                   <div class="card-body text-center">
+                      <form class="form-signin" autocomplete="off">
+                          <div class="form-group">
+                              <label for="inputname">TITLE</label>
+                            <input   class="form-control" type="text" id="inputname" class="form-control" placeholder="title" required autofocus>
+                            
+                          </div>
+                          <div class="form-group">
+                              <label for="DESCRIPTION">DESCRIPTION</label>
+                            <textarea  class="form-control" name="" id="DESCRIPTION" cols="30" rows="2" required autofocus></textarea>
+                          </div>
+                          <div class="form-group">
+                              <label for="category">Category</label>
+                              <select class="form-control" id="category" required autofocus>
+                                  <option value="">Choose One</option>
+                                  <option  value="1">1</option>
+                                  <option  value="2">2</option>
+                                  <option  value="3">3</option>
+                                  <option  value="4">4</option>
+                                  <option  value="5">5</option>
+                                </select>
+                          </div>
+                            <hr>
+                          <button class="btn btn-lg btn-raised btn-success btn-block text-uppercase" type="submit">Submit</button>
+                          <hr class="my-4">
+                          
+                        </form>
+                            
+                   </div>
+                  </div>
+                  <div class="card bg-light text-dark" *ngIf="submitSection">
+                      <a class="btn-link text-info float-left" (click)="callNewsection('back')"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
+                      <div class="card-header text-center">
+                        <span class="text-danger"><i class="fa fa-user-circle"></i> Submitted</span>
+                        
+                      </div>
+                     <div class="card-body text-center">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Author</th>
+                                <th scope="col">Status</th>
+                                <th scope="col"><i class="fa fa-flash"></i></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                  <td>RICH DAD  & POOR DAD</td>
+                                <td>Mark</td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-warning" style="overflow: hidden; position: relative;" data-original-title="Edit User">pending</a></td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-success" style="overflow: hidden; position: relative;" data-original-title="Edit User"><i class="fa fa-pencil"></i></a>
+                                  <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-danger" style="overflow: hidden; position: relative;" data-original-title="Delete User"><i class="fa fa-times"></i></a></td>
+                              </tr>
+                              <tr>
+                                  <td>Think & Grow Rich</td>
+                                <td>Jacob</td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-danger" style="overflow: hidden; position: relative;" data-original-title="Edit User">Rejected</a></td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-success" style="overflow: hidden; position: relative;" data-original-title="Edit User"><i class="fa fa-pencil"></i></a>
+                                  <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-danger" style="overflow: hidden; position: relative;" data-original-title="Delete User"><i class="fa fa-times"></i></a></td>
+                              </tr>
+                              <tr>
+                                  <td>$100 startup</td>
+                                <td>Larry</td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-success" style="overflow: hidden; position: relative;" data-original-title="Edit User">Success</a></td>
+                                <td><a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-success" style="overflow: hidden; position: relative;" data-original-title="Edit User"><i class="fa fa-pencil"></i></a>
+                                  <a href="javascript:void(0)" data-toggle="tooltip" title="" class="btn btn-effect-ripple btn-xs btn-danger" style="overflow: hidden; position: relative;" data-original-title="Delete User"><i class="fa fa-times"></i></a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                              
+                     </div>
+                    </div>
+              </div>
+              </div>
+    </div>
+  </div>
