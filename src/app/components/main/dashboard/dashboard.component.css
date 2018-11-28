@@ -3,12 +3,13 @@
 */
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
-
+hr{
+    border-width: 1px;
+}
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -16,7 +17,10 @@ p {
     line-height: 1.7em;
     color: #999;
 }
-
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
 a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
@@ -38,12 +42,12 @@ a, a:hover, a:focus {
     border: none;
 }
 
-.line {
+/* .line {
     width: 100%;
     height: 1px;
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
-}
+} */
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -58,8 +62,8 @@ a, a:hover, a:focus {
 
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 200px;
+    max-width: 200px;
     background: #4D394B;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
@@ -67,7 +71,7 @@ a, a:hover, a:focus {
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -200px;
     transform: rotateY(100deg);
 }
 
@@ -78,7 +82,7 @@ a, a:hover, a:focus {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    /* border-bottom: 1px solid #47748b; */
 }
 
 #sidebar ul p {
