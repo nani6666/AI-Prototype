@@ -1,45 +1,17 @@
 <app-header></app-header>
-
-<button class="fab fab-assertive "><i class="fa fa-home"></i></button>
-<button id="" class="fab fab-royal float-right "><i class="fa fa-plus"></i></button>
-
-<!-- 
-    <ul class="">
-        <li><button id="" class="fab fab-royal float-right "><i class="fa fa-plus"></i></button></li>
-        <li><button id="" class="fab fab-royal float-right "><i class="fa fa-plus"></i></button></li>
-        <li><button id="" class="fab fab-royal float-right "><i class="fa fa-plus"></i></button></li>
-        <li><button id="" class="fab fab-royal  float-right"><i class="fa fa-plus"></i></button></li>
-        </ul> -->
-
-
- 
-
-<button class="btn btn-primary">Start</button>
-
-<div id="overlay">
-    
-  <div id="text">
-          <div class="row">
-            <div  class="col-md-6">
-              <div class="card bg-light text-dark" [routerLink]="['/author']" style="cursor: pointer;">
-                <div class="card-header text-center">
-                  <span class="text-default"><i class="fa fa-user-circle fa-2x"></i></span>
-                </div>
-               <div class="card-body text-center">
-                        <h4 class="text-info">Author</h4>
-               </div>
-              </div>
-            </div>
-            <div  class="col-md-6">
-                <div class="card text-light" style="background: #DE815C">
-                  <div class="card-header text-center">
-                    <span class="text-info"><i class="fa fa-user-circle fa-2x"></i></span>
-                  </div>
-                  <div class="card-body text-center">
-                    <h4 class="text-info">Proof Reader</h4>
-                  </div>
-                   </div>
-              </div>
-            </div>
-  </div>
-</div>
+ <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components">
+                <p>Title</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                </li>
+            </ul>
+        </nav>
+       
+        <!-- Page Content Holder -->
+        <div id="content">
+            
+        </div>
+    </div>
