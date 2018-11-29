@@ -12,6 +12,8 @@ import { SignupComponent } from './components/main/signup/signup.component';
 import { UserComponent } from './components/main/user/user.component';
 import { DashboardComponent } from './components/main/dashboard/dashboard.component';
 import { AuthorComponent } from './components/main/author/author.component';
+import { LedgerComponent } from './components/main/ledger/ledger.component';
+import { BankDetailsComponent } from './components/main/bank-details/bank-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AuthorComponent } from './components/main/author/author.component';
     SignupComponent,
     UserComponent,
     DashboardComponent,
-    AuthorComponent
+    AuthorComponent,
+    LedgerComponent,
+    BankDetailsComponent
   ],
   imports: [
     BrowserModule,

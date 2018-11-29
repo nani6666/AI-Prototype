@@ -1,92 +1,152 @@
 <app-header></app-header>
- <div class="wrapper">
-        <!-- Sidebar Holder -->
-        <nav id="sidebar">
-            <ul class="list-unstyled components">
-               
-                <li class="active">
-                    <a  data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span>
-                     <i class="fa fa-dashboard"></i> &nbsp; Dashboard
-                    </span></a>
-                </li>
-                <li class="">
-                    <a  ><span>
-                     <i class="fa fa-user"></i> &nbsp; User
-                    </span></a>
-                </li>
-                
-            </ul>
-        </nav>
-       
         <!-- Page Content Holder -->
-        <div id="content">
+        <div class="container">
+          <div class="col-lg-12 col-xl-12 col-12 authortitle">
+              <div class="row"> 
+                     <h1 class="title">Author Dashboard</h1>
+               </div>
+          </div>
             <div class="row">
                 <div class="col-md-6">
                  <div class="row">
-                     <div class="col-md-6 padding-0">
+                     <div class="col-lg-6 col-xl-6 col-md-6 col-12 align-content-center padding-0">
                          <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 ">
                                         <div class="card">
-                                                <div class="card-body">
-                                                   <p>First</p>
+                                                <div class="card-body card-body-section">
+                                                    <div class="row text-center">
+                                                        <div class="pricesection col-lg-8 col-xl-8 col-7">
+                                                          <span class="subtitlevalue text-secondary">Total Unpaid Earnings</span>
+                                                          <br>
+                                                          <span class="value text-secondary"><i class="fa fa-inr" aria-hidden="true"></i> &nbsp; 0.00</span>
+                                                        </div>
+                                                        <div class="iconsection col-lg-4 col-xl-4 col-5">
+                                                          <span class="text-secondary"><i class="fa fa-money fa-4x" aria-hidden="true"></i></span>
+                                                        </div>
+                                                      </div>
                                                 </div>
                                         </div>
                                 </div>
                                 
                          </div>
                          <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 ">
                                     <div class="card">
-                                        <div class="card-body">
-                                                <p>Second</p>
+                                        <div class="card-body card-body-section">
+                                            <div class="row text-center">
+                                                <div class="pricesection col-lg-8 col-xl-8 col-7">
+                                                  <span class="subtitlevalue text-secondary">Total Books Sold</span>
+                                                  <br>
+                                                  <span class="value float-left text-secondary">0</span>
+                                                </div>
+                                                <div class="iconsection col-lg-4 col-xl-4 col-5">
+                                                  <span class="text-secondary"><i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i></span>
+                                                </div>
+                                              </div>
                                         </div>
                                 </div>
                             </div>
                                 
                          </div>
+                         <div class="row">
+                           <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                             <div class="card justify-content-center" style="border-right:0px solid #fff">
+                             <div class="card-body ">
+                               <button class="btn btn-danger">VIEW SALES LEDGER</button>
+                             </div>
+                             </div>
+                              
+                           </div>
+                           
+                         </div>
                       
                     </div>
                     
-                    <div class="col-md-6  padding-0">
-                            
+                    <div class="col-lg-6 col-xl-6 col-md-6 col-12 align-content-center  padding-0">
                             <div class="row">
                                     <div class="col-md-12"><div class="card">
-                                            <div class="card-body">
-                                                    <p>Third</p>
+                                            <div class="card-body card-body-section">
+                                                <div class="row text-center">
+                                                    <div class="pricesection col-lg-8 col-xl-8 col-7">
+                                                      <span class="subtitlevalue text-secondary">Next Payment Date</span>
+                                                      <br>
+                                                      <span class="value text-secondary">{{today | date }}</span>
+                                                    </div>
+                                                    <div class="iconsection col-lg-4 col-xl-4 col-5">
+                                                      <span class="text-secondary"><i class="fa fa-calendar fa-4x" aria-hidden="true"></i></span>
+                                                    </div>
+                                                  </div>
                                             </div>
                                     </div>
                                 </div> 
                              </div>
                              <div class="row">
-                                    <div class="col-md-12"><div class="card">
-                                            <div class="card-body">
-                                                    <p>Fourth</p>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                                      <div class="card">
+                                            <div class="card-body card-body-section">
+                                                <div class="row text-center">
+                                                    <div class="pricesection col-lg-8 col-xl-8 col-7">
+                                                      <span class="subtitlevalue text-secondary">Earnings Due</span>
+                                                      <br>
+                                                      <span class="value text-secondary"><i class="fa fa-inr" aria-hidden="true"></i> &nbsp; 0.00</span>
+                                                      
+                                                    </div>
+                                                    <div class="iconsection col-lg-4 col-xl-4 col-5">
+                                                      <span class="text-secondary"><i class="fa fa-hourglass-half fa-4x" aria-hidden="true"></i></span>
+                                                      
+                                                    </div>
+                                                    <span class="subtitle text-secondary">Minimum earnings to initiate payout - <i class="fa fa-inr" aria-hidden="true"></i > 100</span>
+                                                  </div>
                                             </div>
                                     </div>
                                 </div>
                                     
                             </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                                  <div class="card justify-content-center" style="border-left:0px solid #fff">
+                                  <div class="card-body ">
+                                    <button class="btn btn-danger">VIEW BANK DETIALS</button>
+                                  </div>
+                                  </div>
+                                   
+                                </div>
+                                
+                              </div>
                     </div>
                  </div>
                 </div>
                 <div class="col-md-6">
                     <div class="row">
-                        <div class="col-md-6">
-                         <div class="card">
-                         <div class="card-body">
-                                <p>Publish New Book</p>
-                         </div>
-                         </div>
-                        </div>
-                        <div class="col-md-6">
-                                <div class="card">
-                                        <div class="card-body">
-                                          <p>Refer a Friend</p>
-                                        </div>
+                        <div class="col-lg-6 col-xl-6 col-md-6 justify-content-center align-content-center ">
+                            <div class="row">
+                                <div class="publishing-inner col-lg-12 col-xl-12 col-12 text-center">
+                                  <div class="card publishsection text-center">
+                                      <a >
+                                        <span class=""><i  class="fa fa-plus"></i></span>
+                                        <h3 class="title">Publish New Book</h3>
+                                        <h4 class="subtitle">Click here to start a new book</h4>
+                                      </a>
+                                  </div>
+                                  
                                 </div>
+                              </div>
+                        </div>
+                        <div class="col-md-6 justify-content-center align-content-center ">
+                            <div class="row">
+                                <div class="publishing-inner col-lg-12 col-xl-12 col-12 text-center">
+                                  <div class="card referSection text-center">
+                                      <a >
+                                        <span class=""><i  class="fa fa-bullhorn"></i></span>
+                                        <h3 class="title">Refer a Friend</h3>
+                                        <h4 class="subtitle"> Click here to start a new book</h4>
+                                      </a>
+                                  </div>
+                                  
+                                </div>
+                              </div>
                             </div>
                     </div>
                 </div>
           </div>
          </div>
-        </div>

@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  today= new Date();
   constructor() { }
 
   ngOnInit() {
