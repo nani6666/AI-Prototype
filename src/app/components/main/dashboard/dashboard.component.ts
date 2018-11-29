@@ -8,9 +8,11 @@ import * as $ from 'jquery';
 })
 export class DashboardComponent implements OnInit {
   today= new Date();
+  booksWritten: any[] ;
   constructor() { }
 
   ngOnInit() {
+    this.booksWritten = [{"Book Name": "something"}];
    $(function() {
     $('#sidebarCollapse').on('click', function () {
       $('#sidebar').toggleClass('active');
@@ -19,4 +21,7 @@ export class DashboardComponent implements OnInit {
    });
   }
 
+  publishBook(){
+   this.booksWritten.push({"Book Name": "something"});
+  }
 }

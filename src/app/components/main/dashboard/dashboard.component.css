@@ -22,7 +22,7 @@ p {
     padding-left:0;
 }
 .title{
-    font-size: 18px;
+    font-size: 25px;
 }
 
  span.value {
@@ -50,6 +50,10 @@ p {
     cursor: pointer;
 }
 
+.book_list_cover_page {
+    margin-right: 13px;
+    margin-left: 20px;
+}
 .card-body-section{
     height:110px;
     width: 100%;
@@ -93,3 +97,8 @@ p {
     padding-bottom : 20px;}
 .contentright{padding-top: 20px;padding-bottom: 20px;}
 
+.spantext{
+    margin-right: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+}
