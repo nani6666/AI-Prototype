@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="container">
+  <div style="margin-top:10px;" class="row" *ngFor="let books of booksWritten; let i = index">
+    <div class="col-lg-12 col-sm-12 col-12">
+      <div class="card">
+       <div class="card-body">
+           <div class="row">
+               <div class="col-lg-5 col-sm-5 col-12">
+                   <div class="book_list_cover_page">
+                       <div class="row">
+                         <div class="col-sm-6 col-lg-6 col-12"> 
+                             <img src="https://notionpress.com/new-rewamp/images/bookcover.png" style="width: 165px;height: 255px;">
+                         </div>
+                         <div class="col-sm-6 col-lg-6 col-12"> 
+                             <h3>Book-{{i + 1}}</h3>
+                             <span class="text-secondary">By: <strong class="text-dark">Raviteja</strong></span>
+                             <br>
+                             <span class="text-secondary"> Publishing Mode: <strong class="text-dark">Guided</strong></span>
+                            
+                         </div>
+                       </div>
+                     </div>
+                     
+               </div>
+               <div class="col-lg-7 col-sm-7 col-12 border-left">
+                   <div class="row">
+                       <div class="col-sm-6 col-lg-6 col-12"> 
+                           <span class="text-secondary">Publishing Status: <strong class="text-dark">Draft</strong></span>
+                           <br>
+                           <span class="text-secondary">Listing Status: <strong class="text-dark">Inactive</strong></span>
+                       </div>
+                       <div class="col-sm-6 col-lg-6 col-12"> 
+                           <span class="text-secondary">Order Author Copies</span>
+                           <br>
+                           <span class="text-secondary">  View Sales Report</span>
+                          
+                       </div>
+                     </div>
+                     <hr>
+                     <div class="row">
+                         <div class="col-sm-12 col-lg-12 col-12"> 
+                             <span class="spantext text-secondary">Coupon Code Manager</span>
+                             <span class="spantext text-secondary">Promo Manager </span>
+                             <span class="spantext text-secondary"> BookPostr</span>
+                             <span class="spantext text-secondary">Apply for Accelerator</span>
+                         </div>
+                       </div>
+                       <div class="row" style="margin-top:25px">
+                           <div class="col-sm-12 col-lg-12 col-12"> 
+                             <button class="btn btn-danger">Contact your Consultant</button> 
+                           </div>
+                         </div>
+                 </div>
+            </div>
+       </div>
+      </div>
+      
+    </div>
+   </div>
+</div>

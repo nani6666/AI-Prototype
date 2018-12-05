@@ -12,6 +12,8 @@ import { SignupComponent } from './components/main/signup/signup.component';
 import { UserComponent } from './components/main/user/user.component';
 import { DashboardComponent } from './components/main/dashboard/dashboard.component';
 import { AuthorComponent } from './components/main/author/author.component';
+import { BooksComponent } from './components/main/books/books.component';
+
 // Route Configuration
 export const routes: Routes = [
     { path: '', component: LoginComponent },
@@ -22,6 +24,7 @@ export const routes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'profile', component: UserComponent },
     { path: 'dashboard', component: DashboardComponent },
+    { path: 'books', component: BooksComponent },
     { path: 'author', component: AuthorComponent },
 ];
 

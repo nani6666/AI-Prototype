@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';  
+import { CommonModule } from '@angular/common';
 import { routing } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/main/dashboard/dashboard.compon
 import { AuthorComponent } from './components/main/author/author.component';
 import { LedgerComponent } from './components/main/ledger/ledger.component';
 import { BankDetailsComponent } from './components/main/bank-details/bank-details.component';
+import { BooksComponent } from './components/main/books/books.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BankDetailsComponent } from './components/main/bank-details/bank-detail
     DashboardComponent,
     AuthorComponent,
     LedgerComponent,
-    BankDetailsComponent
+    BankDetailsComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
