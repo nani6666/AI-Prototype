@@ -15,6 +15,12 @@ import { AuthorComponent } from './components/main/author/author.component';
 import { LedgerComponent } from './components/main/ledger/ledger.component';
 import { BankDetailsComponent } from './components/main/bank-details/bank-details.component';
 import { BooksComponent } from './components/main/books/books.component';
+import { TitleInformationComponent } from './components/bookPublishing/title-information/title-information.component';
+import { CoverdesignComponent } from './components/bookPublishing/coverdesign/coverdesign.component';
+import { SelectdistributionComponent } from './components/bookPublishing/selectdistribution/selectdistribution.component';
+import { SetpricingComponent } from './components/bookPublishing/setpricing/setpricing.component';
+import { SendforReviewComponent } from './components/bookPublishing/sendfor-review/sendfor-review.component';
+import { PreviewFinalFilesComponent } from './components/bookPublishing/preview-final-files/preview-final-files.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,13 @@ import { BooksComponent } from './components/main/books/books.component';
     AuthorComponent,
     LedgerComponent,
     BankDetailsComponent,
-    BooksComponent
+    BooksComponent,
+    TitleInformationComponent,
+    CoverdesignComponent,
+    SelectdistributionComponent,
+    SetpricingComponent,
+    SendforReviewComponent,
+    PreviewFinalFilesComponent
   ],
   imports: [
     BrowserModule,

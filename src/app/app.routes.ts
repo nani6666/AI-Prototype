@@ -13,6 +13,8 @@ import { UserComponent } from './components/main/user/user.component';
 import { DashboardComponent } from './components/main/dashboard/dashboard.component';
 import { AuthorComponent } from './components/main/author/author.component';
 import { BooksComponent } from './components/main/books/books.component';
+import { TitleInformationComponent } from './components/bookPublishing/title-information/title-information.component';
+
 
 // Route Configuration
 export const routes: Routes = [
@@ -26,6 +28,7 @@ export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'books', component: BooksComponent },
     { path: 'author', component: AuthorComponent },
+    { path: 'titleinformation', component: TitleInformationComponent },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes, {useHash: true});
