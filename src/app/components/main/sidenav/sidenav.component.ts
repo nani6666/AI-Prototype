@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-
+  bookTitle: any;
   constructor() { }
 
   ngOnInit() {
+    this.bookTitle = localStorage.getItem('booktitle');
   }
 
 }

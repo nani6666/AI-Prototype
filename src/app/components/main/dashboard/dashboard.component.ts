@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,21 +8,24 @@ import * as $ from 'jquery';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  today= new Date();
+  today = new Date();
   booksWritten: any[] ;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-    this.booksWritten = [{"Book Name": "something"}];
+    this.booksWritten = [{'Book Name': 'something'}];
    $(function() {
-    $('#sidebarCollapse').on('click', function () {
-      $('#sidebar').toggleClass('active');
-      $(this).toggleClass('active');
-  });
+
    });
   }
 
-  publishBook(){
-   this.booksWritten.push({"Book Name": "something"});
+  publishBook() {
+   this.booksWritten.push({'Book Name': 'something'});
+  }
+
+  contractConsultant(param: any) {
+  console.log(param);
+   localStorage.setItem('booktitle' , param);
+   this.router.navigate(['/titleinformation']);
   }
 }

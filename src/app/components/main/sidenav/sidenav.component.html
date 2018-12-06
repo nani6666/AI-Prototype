@@ -1,11 +1,13 @@
 
 <div class="sidenav">
-  <img src="">
-  <a routerLink="/dashboard"> BACK TO DASHBOARD</a>
-  <a routerLink="/titleinformation">Title Information</a>
-  <a href="">Cover Design</a>
-  <a href="">Select Distribution</a>
-  <a href="">Set pricing</a>
-  <a href="">Send for Review</a>
-  <a href="">Finished</a>
+  <div class="logoimg">
+      <h2 class=" navbar-brand text-light" ><span class="sidebar-nav-mini-hide"><i class="fa fa-cube"></i> Evoque<strong>Demo</strong></span></h2>
+      <a routerLink="/dashboard"> <span><i class="fa fa-chevron-left" aria-hidden="true"></i> BACK TO DASHBOARD</span></a>
+      <p class="booktitle"> BOOK - {{bookTitle}}</p>
+  </div>
+  
+  <a  class="" routerLink="/titleinformation"> <span><i class="fa fa-times-circle text-danger" aria-hidden="true"></i> Title Information</span></a>
+  <a routerLink="/coverDesign"><span><i class="fa fa-times-circle text-danger" aria-hidden="true"></i> Cover Design</span></a>
+  <a routerLink="/sendReview"><span><i class="fa fa-times-circle text-danger" aria-hidden="true"></i> Send for Review</span> </a>
+  <a routerLink="/finished"><span><i class="fa fa-times-circle text-danger" aria-hidden="true"></i> Finished</span>  </a>
 </div>

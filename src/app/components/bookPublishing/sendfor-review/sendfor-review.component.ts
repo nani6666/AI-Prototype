@@ -10,6 +10,7 @@ export class SendforReviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

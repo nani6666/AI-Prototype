@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./preview-final-files.component.css']
 })
 export class PreviewFinalFilesComponent implements OnInit {
-
+ date: any;
   constructor() { }
 
   ngOnInit() {
+    this.date =  new Date();
   }
 
 }
