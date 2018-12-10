@@ -6,10 +6,10 @@
       </div>
       <div class="col-sm-10 text-center">
         <div class="">
-          <h1>Preview Final Files</h1>
+          <h1>Success</h1>
           <p>Preview the final print-ready files for your book</p>
-         <div class="card cardbox bg-default">
-            <h5 class="">Finished Files</h5>
+         <div class="card cardbox cardbg">
+            <h5 class="text-left" style="padding-left:15px;">Finished Files</h5>
           <div class="card-body">
             <div class="row">
              <div class="col-sm-6 col-12 col-lg-6 ">
@@ -24,7 +24,7 @@
                  <p class="float-left">Published Date</p>
                 </div>
                 <div class="col-sm-6 col-12 col-lg-6">
-                   <a class=" text-dark">: {{date}}</a>
+                   <a class="float-left text-dark">: {{date | date: 'dd-MM-yyyy hh:mm:ss a'}}</a>
                  </div>
                </div>
           </div>
