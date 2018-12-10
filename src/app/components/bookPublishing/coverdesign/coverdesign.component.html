@@ -4,8 +4,21 @@
       <div class="col-sm-2">
         <app-sidenav></app-sidenav>
       </div>
-      <div class="col-sm-10 text-center">
-         <P>Cover Design </P>
+      <div class="col-sm-10 col-md-10 col-lg-10 col-10 text-center">
+      <h2>Cover Design </h2>
+      <p>Enter all the information about the book-It's title,author(s) and description</p>
+      <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-2" *ngFor="let item of product" >
+          <div class="card">
+            <h6>8.5*11</h6>
+            <img class="card-img-top" src="{{item}}" alt="Card image" style="width:100%">
+          </div>
+        </div>
       </div>
+      <div class="text-center">
+          <button type="button" class="btn btn-danger " >Save Continue</button>
+        </div>
+      </div>
+
     </div>
   </div>
