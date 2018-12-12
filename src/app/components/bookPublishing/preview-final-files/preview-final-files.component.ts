@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./preview-final-files.component.css']
 })
 export class PreviewFinalFilesComponent implements OnInit {
+
  date: any;
  finishedParam: boolean;
   constructor() { }
@@ -13,6 +14,7 @@ export class PreviewFinalFilesComponent implements OnInit {
   ngOnInit() {
     this.finishedParam = true;
     this.date =  new Date();
+
   }
 
 }
