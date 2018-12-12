@@ -112,3 +112,14 @@ padding-top: 30px;
     -moz-transition: All 0.3s ease;
     -o-transition: All 0.3s ease;
   }
+
+  /* .progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+}
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+} */

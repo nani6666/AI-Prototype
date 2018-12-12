@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviewFinalFilesComponent implements OnInit {
  date: any;
+ finishedParam: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.finishedParam = true;
     this.date =  new Date();
   }
 

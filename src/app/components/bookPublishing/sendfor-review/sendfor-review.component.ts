@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sendfor-review.component.css']
 })
 export class SendforReviewComponent implements OnInit {
-
+  srparam: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.srparam = false;
   }
 
 }
