@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { routing } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { TitleInformationComponent } from './components/bookPublishing/title-inf
 import { CoverdesignComponent } from './components/bookPublishing/coverdesign/coverdesign.component';
 import { SendforReviewComponent } from './components/bookPublishing/sendfor-review/sendfor-review.component';
 import { PreviewFinalFilesComponent } from './components/bookPublishing/preview-final-files/preview-final-files.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { PreviewFinalFilesComponent } from './components/bookPublishing/preview-
     routing,
     HttpClientModule,
     CommonModule,
+    FormsModule,
+    ToastrModule.forRoot() // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

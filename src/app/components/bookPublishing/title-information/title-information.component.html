@@ -10,85 +10,130 @@
           <span class="text-center">Enter all the information about the book-It's title,author(s) and description</span>
         </div>
          
-         <h6>Book Title</h6>
-         <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <input type="text" class="form-control" placeholder="Enter your Book Title">
-          <h6>Book Description</h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <textarea type="text" class="form-control" placeholder="Enter text lessthan 1500 characters"></textarea>
-          <h6>Subtitle</h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <input type="text" class="form-control" placeholder="Enter Book Subtitle">
-          <h6>Author Name<strong style="color: red">*</strong></h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <input type="text" class="form-control" placeholder="Enter full Name ">
-          <h6>Add Contributors</h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. </p>
-          <label class="container">
-              <input type="checkbox" checked="checked" name="radio">Illustrator
-              <input type="checkbox" name="radio">Editor
-              <input type="checkbox" name="radio">Co-author
-              <button type="button" class="btn btn-danger">Add</button>
-          </label>
-          <h6>Add Keywords</h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <input type="text" class="form-control" placeholder="Keyword1,Keyword2">
-          <h6>Author Biography<strong style="color: red">*</strong></h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-          choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-          <textarea type="text" class="form-control" placeholder="Enter text lessthan 2500 characters"></textarea>
-          <h6>Category<strong style="color: red">*</strong></h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
-          <div class="row">
-           <div class="collg-6 col-sm-6 col-12">
-            <select class="form-control">
-              <option value="">Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-           </div>
+        <div class="step1" *ngIf="step1">
+          <div class="card">
+              <div class="card-body">
+                  <h3 class="text-center text-info">Step1</h3>
+                  <h6>Book Title</h6>
+                  <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+                   choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+                   <input list="books" class="form-control" placeholder="Enter your Book Title" [(ngModel)]="bookTitle" autofocus="autofocus" (change)="booktitlechange()">
+                   <datalist id="books">
+                      <option value="Rich Dad & Poor Dad">
+                      <option value="The Alchemist">
+                      <option value="Half Girlfriend">
+                      <option value="The 4 hour work week">
+                      <option value="Think & Grow Rich">
+                      <option value="The Art of war">
+                      <option value="E-Myth">
+                      <option value="Good to Great">
+                      <option value="7 habits of highly Effective People">
+                      <option value="How to win Friends and Infulence people">
+                   </datalist> 
+                   <h6>Book Description</h6>
+                   <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+                   choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+                   <textarea type="text" class="form-control" disabled placeholder="Enter text lessthan 1500 characters"  [(ngModel)]="bookDescription"></textarea>
+                   <h6>Subtitle</h6>
+                   <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+                   choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+                   <input type="text" class="form-control" placeholder="Enter Book Subtitle" [(ngModel)]="bookSubtitle">
+                   <br>
+                   <div class="text-center">
+                          <button class="btn btn-sm btn-info" (click)="next(1)">Next</button>
+                    </div>
+              </div> 
+          </div> 
+        </div>
+         <div class="step2" *ngIf="step2">
+            <div class="card">
+                <div class="card-body">
+            <h3 class="text-center text-info">Step2</h3>
+             <h6>Author Name<strong style="color: red">*</strong></h6>
+             <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+             choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+             <input type="text" class="form-control" placeholder="Enter full Name " [(ngModel)]="bookAuthorName">
+            <h6>Add Contributors</h6>
+            <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. </p>
+            <label class="container">
+                <input type="checkbox"disabled name="radio">Illustrator
+                <input type="checkbox" disabled name="radio">Editor
+                <input type="checkbox" disabled name="radio">Co-author
+                <button type="button" disabled class="btn btn-sm btn-danger">Add</button>
+            </label>
+            <h6>Add Keywords</h6>
+            <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+            choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+            <input type="text" class="form-control" placeholder="Keyword1,Keyword2"  disabled [(ngModel)]="bookKeywords">
+            <h6>Author Biography<strong style="color: red">*</strong></h6>
+            <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
+            choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+            <textarea type="text" class="form-control" placeholder="Enter text lessthan 2500 characters" [(ngModel)]="authorBiography"></textarea>
+            <br>
+            <div class="row text-center">
+              <div class="col-sm-6">
+                  <button class="btn btn-sm btn-info" (click)="previous(1);">Previous</button>
+              </div>
+              <div class="col-sm-6">
+                  <button class="btn btn-sm btn-info " (click)="next(2)">Next</button>
+               </div>
+            </div>
+            </div>
           </div>
-          
-          <h6>Language<strong style="color: red">*</strong></h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
-          <div class="row">
-              <div class="collg-6 col-sm-6 col-12">
-               <select class="form-control">
-                 <option value="">Select</option>
-                 <option value="English">English</option>
-                 <option value="Hindi">Hindi</option>
-                 <option value="French">French</option>
-                 <option value="Spanish">Spanish</option>
-               </select>
+         </div>
+          <div class="step3" *ngIf="step3">
+              <h3 class="text-center text-info">Step3</h3>
+              <div class="card">
+                  <div class="card-body">
+              <h6>Category<strong style="color: red">*</strong></h6>
+              <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
+              <div class="row">
+               <div class="collg-6 col-sm-6 col-12">
+                <select class="form-control" [(ngModel)]="bookCategory">
+                  <option value="">Select</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+               </div>
               </div>
-             </div>
-             <div class="form-group">
-          <h6>Audience<strong style="color: red">*</strong></h6>
-          <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
-          <div class="row">
-              <div class="collg-6 col-sm-6 col-12">
-               <select class="form-control">
-                 <option value="">Select</option>
-                 <option value="Kids">Kids</option>
-                 <option value="Teenage">Teenage</option>
-                 <option value="Adult">Adult</option>
-               </select>
-              </div>
-             </div>
-            </div>
-            <div class="text-center">
-              <button type="button"  class="btn btn-danger" (click)="submit()">Save and Continue</button>
-            </div>
               
-          
-         
+              <h6>Language<strong style="color: red">*</strong></h6>
+              <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
+              <div class="row">
+                  <div class="col-lg-6 col-sm-6 col-12">
+                   <select class="form-control" [(ngModel)]="bookLang">
+                     <option value="">Select</option>
+                     <option value="English">English</option>
+                   </select>
+                  </div>
+                 </div>
+                 <div class="form-group">
+              <h6>Audience<strong style="color: red">*</strong></h6>
+              <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
+              <div class="row">
+                  <div class="collg-6 col-sm-6 col-12">
+                   <select class="form-control"  [(ngModel)]="bookAudience">
+                     <option value="">Select</option>
+                     <option value="Kids">Kids</option>
+                     <option value="Teenage">Teenage</option>
+                     <option value="Adult">Adult</option>
+                   </select>
+                  </div>
+                 </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <button class="btn btn-sm btn-info " (click)="previous(2);">Previous</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="button"  class="btn btn-sm btn-success" (click)="submit()">Save</button>
+                     </div>
+                  </div>
+                </div>
+              </div>
+          </div>
       </div>
     </div>
   </div>

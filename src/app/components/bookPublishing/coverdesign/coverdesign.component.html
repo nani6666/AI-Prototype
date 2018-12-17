@@ -7,7 +7,7 @@
       <div class="col-sm-10 col-md-10 col-lg-10 col-10 text-center">
       <h2>Cover Design </h2>
       <p>Enter all the information about the book-It's title,author(s) and description</p>
-      <div *ngIf="loadingProgress">
+      <div *ngIf="loadingProgress" style="margin-top: 45px;">
           <div class="container text-center" >
           <h5>Please wait . . .</h5>
               <div class="progress">
@@ -20,9 +20,9 @@
       <div *ngIf="!loadingProgress" >
       <div class="row">
         <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-2" *ngFor="let item of product" >
-          <div class="card">
-            <h6>{{item}}</h6>
-            <img class="card-img-top" src="../../../../assets/images/coverpage.jpeg" alt="Card image" style="width:100%">
+          <div class="card" [ngClass]="{'red': item?.color == 'red', 'bg-success': item?.color == 'yellow', 'bg-info': item?.color == 'blue' , 'bg-light': item?.color == 'grey'}" >
+            <h6>{{item .size}}</h6>
+            <img class="card-img-top" src="../../../../assets/images/book.jpg" alt="Card image" style="width:100%">
             <div class="">
               <label class="switch">
                 <input class="switch-input" type="checkbox" />

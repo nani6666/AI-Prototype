@@ -14,10 +14,6 @@ export class SidenavComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this. titleInfo);
-  console.log(this. coverDesign);
-  console.log(this. sendReview);
-  console.log(this. finish);
     this.bookTitle = localStorage.getItem('booktitle');
   }
 

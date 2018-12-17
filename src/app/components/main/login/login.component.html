@@ -2,6 +2,9 @@
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
+          <div class="card-header text-center bg-info">
+              <a class="navbar-brand text-dark" ><span class="sidebar-nav-mini-hide"><i class="fa fa-cube"></i> Evoque<strong>Demo</strong></span></a>
+          </div>
           <div class="card-body">
             <div class="text-center"> 
                 <span><i class="fa fa-user-circle fa-4x"></i></span>
@@ -24,7 +27,7 @@
                 <input type="checkbox" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
-              <button class="btn btn-lg btn-raised btn-success btn-block text-uppercase" type="submit">Sign in</button>
+              <button class="btn btn-lg btn-raised btn-success btn-block text-uppercase" type="submit" [routerLink]="['/dashboard']">Sign in</button>
               <hr class="my-4">
               <div class="form-group" style="text-align:center">
                 <h4>Don't have an account ?</h4>

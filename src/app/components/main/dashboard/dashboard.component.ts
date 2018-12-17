@@ -20,12 +20,12 @@ export class DashboardComponent implements OnInit {
   }
 
   publishBook() {
+    this.router.navigate(['/titleinformation']);
    this.booksWritten.push({'Book Name': 'something'});
   }
 
   contractConsultant(param: any) {
   console.log(param);
    localStorage.setItem('booktitle' , param);
-   this.router.navigate(['/titleinformation']);
   }
 }
