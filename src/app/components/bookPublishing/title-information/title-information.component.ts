@@ -77,7 +77,8 @@ export class TitleInformationComponent implements OnInit {
  }
 
  next(param: any) {
-  if ( this.bookTitle != undefined  || this.bookTitle != '' ) {
+   console.log(this.bookTitle);
+  if ( this.bookTitle) {
     if (param === 1) {
       this.step2 = true;
       this.step3 = false;
