@@ -31,6 +31,18 @@ export class TitleInformationComponent implements OnInit {
    this.step1 = true;
    this.step2 = false;
    this.step3 = false;
+   const bookgetData = JSON.parse(localStorage.getItem('booksData'));
+   if (bookgetData !== null) {
+    this.bookTitle = bookgetData.bookTitle;
+  this.bookLang = bookgetData.bookLang;
+  this.bookCategory = bookgetData.bookCategory;
+  this.authorBiography =  bookgetData.authorBiography;
+ // this.bookKeywords =  bookgetData.bookKeywords;
+  this.bookAuthorName = bookgetData.bookAuthorName;
+  this.bookSubtitle =  bookgetData.bookSubtitle;
+  this.bookDescription =  bookgetData.bookDescription;
+   }
+  
    $(function() {});
   }
  submit() {
@@ -65,9 +77,7 @@ export class TitleInformationComponent implements OnInit {
  }
 
  next(param: any) {
-  console.log(this.bookTitle);
-
-  if (this.bookTitle == '' || this.bookTitle == undefined) {
+  if ( this.bookTitle != undefined  || this.bookTitle != '' ) {
     if (param === 1) {
       this.step2 = true;
       this.step3 = false;
@@ -78,7 +88,7 @@ export class TitleInformationComponent implements OnInit {
       this.step1 = false;
      }
   } else {
-    this.toastr.success('Hello world!', 'Toastr fun!');
+    this.toastr.error('Please Enter Book Name', '');
   }
  }
 

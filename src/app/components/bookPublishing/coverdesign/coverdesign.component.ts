@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-coverdesign',
   templateUrl: './coverdesign.component.html',
@@ -10,7 +12,7 @@ export class CoverdesignComponent implements OnInit {
   product: any[];
   loadingProgress: boolean;
   coverdesignparam: boolean;
-  constructor() { }
+  constructor(private router: Router , private toastr: ToastrService) { }
 
   ngOnInit() {
     this.coverdesignparam = false;
@@ -41,4 +43,7 @@ export class CoverdesignComponent implements OnInit {
                   {'size' : '9*5' , 'color': 'grey' } , {'size' : '9*5' , 'color': 'grey' },
                 ];
   }
+   saveReview() {
+    this.router.navigate(['/sendReview']);
+   }
 }

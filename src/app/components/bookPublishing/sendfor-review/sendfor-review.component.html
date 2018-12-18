@@ -13,7 +13,7 @@
                  <h6>Title Information</h6>
                </div>
                <div class="col-sm-2">
-                 <a>Edit</a>
+                 <a [routerLink]="['/titleinformation']">Edit</a>
                </div>
              </div>
              <div class="row">
@@ -24,7 +24,7 @@
                 <strong>:</strong>
               </div>
               <div class="col-sm-5">
-                <span>Sense and Sensibility</span>
+                <span>{{bookTitle}}</span>
               </div>
             </div>
 
@@ -36,7 +36,7 @@
                 <strong>:</strong>
               </div>
               <div class="col-sm-5">
-                <span></span>
+                <span>{{bookSubtitle}}</span>
               </div>
             </div>
 
@@ -48,7 +48,7 @@
                 <strong>:</strong>
               </div>
               <div class="col-sm-5">
-                <span>Jane Asten</span>
+                <span>{{bookAuthorName}}</span>
               </div>
             </div>
 
@@ -60,7 +60,7 @@
                 <strong>:</strong>
               </div>
               <div class="col-sm-5">
-                <span>Fiction/Clasics</span>
+                <span>{{bookCategory}}</span>
               </div>
             </div>
 
@@ -72,7 +72,7 @@
                 <strong>:</strong>
               </div>
               <div class="col-sm-5">
-                <span>English</span>
+                <span>{{bookLang}}</span>
               </div>
             </div>
 
@@ -96,7 +96,7 @@
                <strong>:</strong>
              </div>
              <div class="col-sm-5">
-               <button type="button" class="btn btn-danger ">Review</button>
+               <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Review</button>
              </div>
            </div>
 
@@ -107,8 +107,29 @@
          <input type="checkbox" checked="checked" name="radio">I have  reviewed the interior and cover files
          and agree to the <span id="check">EvoqueDemo Publishing Agreement</span><br>
          <div class="text-center">
-        <button type="button" class="btn btn-danger " id="submit">SUBMIT FOR REVIEW</button>
+        <button type="button" class="btn btn-danger " id="submit" routerLink="/finished">SUBMIT FOR REVIEW</button>
       </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
