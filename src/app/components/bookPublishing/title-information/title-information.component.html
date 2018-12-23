@@ -15,8 +15,8 @@
               <div class="card-body">
                   <h3 class="text-center text-info">Step1</h3>
                   <h6>Book Title</h6>
-                  <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
-                   choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
+                  <p>Please Enter or select these books only(Rich Dad & Poor Dad , The Alchemist , Half Girlfriend , The 4 hour work week ,
+                        Think & Grow Rich ,The Art of war , E-Myth , Good to Great , 7 habits of highly Effective People ,How to win Friends and Infulence people).</p>
                    <input list="books" class="form-control" placeholder="Enter your Book Title" [(ngModel)]="bookTitle" autofocus="autofocus" (change)="booktitlechange()">
                    <datalist id="books">
                       <option value="Rich Dad & Poor Dad">
@@ -91,10 +91,20 @@
                <div class="collg-6 col-sm-6 col-12">
                 <select class="form-control" [(ngModel)]="bookCategory">
                   <option value="">Select</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
+                  <option value="Action and adventure">Action and adventure</option>
+                  <option value="Art">Art</option>
+                  <option value="Biography">Biography</option>
+                  <option value="Health">Health</option>
+                  <option value="cooking">cooking</option>
+                  <option value="History">History</option>
+                  <option value="crime">crime</option>
+                  <option value="Drama">Drama</option>
+                  <option value="Horror">Horror</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Thriller">Thriller</option>
+                  <option value="Romance">Romance</option>
+                  <option value="Personality Development">Personality Development</option>
+                  <option value="Sci-Fic<">Sci-Fic</option>
                 </select>
                </div>
               </div>
