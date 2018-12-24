@@ -102,9 +102,9 @@ export class TitleInformationComponent implements OnInit {
  } else if (this.bookTitle == 'The Alchemist') {
   // tslint:disable-next-line:max-line-length
   this.bookDescription =  'The Alchemist follows the journey of an Andalusian shepherd boy named Santiago. Believing a recurring dream to be prophetic, he asks a Romani fortune teller in a nearby town about its meaning. The woman interprets the dream as a prophecy telling the boy that he will discover a treasure at the Egyptian pyramids';
-  } else if (this.bookTitle == 'Half Girlfriend') {
+  } else if (this.bookTitle == 'ZERO to ONE') {
     // tslint:disable-next-line:max-line-length
-    this.bookDescription =  'Madhav Jha, a rural boy from Dumraon, a village in Bhojpur, Bihar, comes to meet the author, who is actually Chetan Bhagat, and leaves behind a few journals from his half-girlfriend, who he believes has died. Chetan Bhagat calls him up the next morning to hear his story.';
+    this.bookDescription =  'Zero To One is an inside look at Peter Thiel s philosophy and strategy for making your startup a success by looking at the lessons he learned from founding and selling PayPal, investing in Facebook and becoming a billionaire in the process';
   } else if (this.bookTitle == 'The 4 hour work week') {
     // tslint:disable-next-line:max-line-length
     this.bookDescription =  ' The 4-Hour Workweek is the step-by-step blueprint to free yourself from the shackles of a corporate job, create a business to fund the lifestyle of your dreams, and live life like a millionaire, without actually having to be one.';

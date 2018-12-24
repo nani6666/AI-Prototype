@@ -21,8 +21,7 @@ export class SendforReviewComponent implements OnInit {
   ngOnInit() {
     this.srparam = false;
     const bookgetData = JSON.parse(localStorage.getItem('booksData'));
-     console.log(bookgetData);
-     this.bookTitle = bookgetData.bookTitle;
+  this.bookTitle = bookgetData.bookTitle;
   this.bookLang = bookgetData.bookLang;
   this.bookCategory = bookgetData.bookCategory;
   this.authorBiography =  bookgetData.authorBiography;
