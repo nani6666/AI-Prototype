@@ -11,3 +11,12 @@
   body{
     background: #F7F7F7 !important;
   }
+
+  .red{
+    background: #FF053F;
+  }
+
+  img{
+padding: 20px;
+height: 200px;
+}

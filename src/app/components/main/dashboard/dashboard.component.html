@@ -171,11 +171,20 @@
                               <div class="book_list_cover_page">
                                   <div class="row">
                                     <div class="col-sm-6 col-lg-6 col-12"> 
-                                        <img src="https://notionpress.com/new-rewamp/images/bookcover.png" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'The 4 hour work week'" src="../../../../assets/images/books/4hour/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == '7 habits of highly Effective People'" src="../../../../assets/images/books/7habits/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'ZERO to ONE'" src="../../../../assets/images/books/021/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'The Alchemist'" src="../../../../assets/images/books/alchemist/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'The Art of war'" src="../../../../assets/images/books/artofwar/one.jpeg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'E-Myth'" src="../../../../assets/images/books/e-myth/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'Good to Great'" src="../../../../assets/images/books/goodtogreat/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'How to win Friends and Infulence people'" src="../../../../assets/images/books/htwfip/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'Rich Dad & Poor Dad'" src="../../../../assets/images/books/richDadandpoorDad/one.jpg" style="width: 165px;height: 255px;">
+                                        <img *ngIf="books.bookTitle == 'Think & Grow Rich'" src="../../../../assets/images/books/thinkgrowrich/one.jpg" style="width: 165px;height: 255px;">
                                     </div>
                                     <div class="col-sm-6 col-lg-6 col-12"> 
-                                        <h3>Book-{{i + 1}}</h3>
-                                        <span class="text-secondary">By: <strong class="text-dark">Raviteja</strong></span>
+                                        <h3>{{books.bookTitle}}</h3>
+                                        <span class="text-secondary">By: <strong class="text-dark">{{books.bookAuthorName}}</strong></span>
                                         <br>
                                         <span class="text-secondary"> Publishing Mode: <strong class="text-dark">Guided</strong></span>
                                        

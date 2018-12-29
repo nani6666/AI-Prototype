@@ -16,6 +16,7 @@ export class SendforReviewComponent implements OnInit {
   bookAuthorName: any;
   bookSubtitle: any;
   bookDescription: any;
+  coverDesign: any[];
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +30,8 @@ export class SendforReviewComponent implements OnInit {
   this.bookAuthorName = bookgetData.bookAuthorName;
   this.bookSubtitle =  bookgetData.bookSubtitle;
   this.bookDescription =  bookgetData.bookDescription;
+  const coverDesignData = JSON.parse(localStorage.getItem('coverDesign'));
+  this.coverDesign = coverDesignData ;
   }
 
 }

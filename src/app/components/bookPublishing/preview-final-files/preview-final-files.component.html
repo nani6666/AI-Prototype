@@ -15,7 +15,7 @@
               <p class="float-left">Cover Design</p>
              </div>
              <div class="col-sm-6 col-12 col-lg-6">
-                <a class="float-left text-danger">: Preview</a>
+                <a class="float-left text-danger" data-toggle="modal" data-target="#exampleModal">: Preview</a>
               </div>
             </div>
             <div class="row">
@@ -28,8 +28,41 @@
                     </a>
                  </div>
                </div>
+               <button class="btn btn-sm btn-outline-success" (click)="finalsubmit()">Submit</button>
           </div>
+          
          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-2" *ngFor="let item of coverDesign" >
+              <div class="card" [ngClass]="{'red': item?.color == 'red', 'bg-success': item?.color == 'yellow', 'bg-info': item?.color == 'blue' , 'bg-light': item?.color == 'grey'}" >
+                <h6 class="text-center">{{item .size}}</h6>
+                <img class="card-img-top" src="{{item.image}}" alt="Card image" style="width:100%" >
+                <div class="">
+                  <span class="text-center">Paperback</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

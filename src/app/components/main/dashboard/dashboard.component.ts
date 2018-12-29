@@ -13,7 +13,9 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-    this.booksWritten = [{'Book Name': 'something'}];
+    const bookgetData = JSON.parse(localStorage.getItem('booksArray'));
+    this.booksWritten = bookgetData;
+    console.log(bookgetData);
    $(function() {
 
    });
@@ -21,7 +23,7 @@ export class DashboardComponent implements OnInit {
 
   publishBook() {
     this.router.navigate(['/titleinformation']);
-   this.booksWritten.push({'Book Name': 'something'});
+    localStorage.clear();
   }
 
   contractConsultant(param: any) {
