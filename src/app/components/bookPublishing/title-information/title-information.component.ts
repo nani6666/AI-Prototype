@@ -161,7 +161,7 @@ export class TitleInformationComponent implements OnInit {
 
 showLetter(field: any , text: any, delay: any) {
   $(field).val(text.substring(0, 1));
-  for (let i = 2; i <= text.length; i++) {
+  for (let i = 0; i <= text.length; i++) {
     // tslint:disable-next-line:no-shadowed-variable
     (function(i: number) {
        setTimeout(function() {
