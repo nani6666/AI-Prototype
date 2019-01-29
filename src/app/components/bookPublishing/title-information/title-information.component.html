@@ -33,7 +33,7 @@
                    <h6>Book Description</h6>
                    <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
                    choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-                   <textarea type="text" class="form-control" disabled placeholder="Enter text lessthan 1500 characters"  [(ngModel)]="bookDescription"></textarea>
+                   <textarea type="text" id="titleDescriptionField" class="form-control" disabled placeholder="Enter text lessthan 1500 characters"  [(ngModel)]="bookDescription"></textarea>
                    <h6>Subtitle</h6>
                    <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
                    choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
@@ -52,8 +52,8 @@
              <h6>Author Name<strong style="color: red">*</strong></h6>
              <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
              choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-             <input type="text" class="form-control" placeholder="Enter full Name " [(ngModel)]="bookAuthorName">
-            <h6>Add Contributors</h6>
+             <input type="text" class="form-control" placeholder="Enter full Name " id="authorNameField" [(ngModel)]="bookAuthorName">
+            <!-- <h6>Add Contributors</h6>
             <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. </p>
             <label class="container">
                 <input type="checkbox"disabled name="radio">Illustrator
@@ -64,11 +64,11 @@
             <h6>Add Keywords</h6>
             <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
             choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-            <input type="text" class="form-control" placeholder="Keyword1,Keyword2"  disabled [(ngModel)]="bookKeywords">
+            <input type="text" class="form-control" placeholder="Keyword1,Keyword2"  disabled [(ngModel)]="bookKeywords"> -->
             <h6>Author Biography<strong style="color: red">*</strong></h6>
             <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), 
             choose the kind of snip you want, and then select the area of the screen capture that you want.</p>
-            <textarea type="text" class="form-control" placeholder="Enter text lessthan 2500 characters" [(ngModel)]="authorBiography"></textarea>
+            <textarea type="text" class="form-control" placeholder="Enter text lessthan 2500 characters" id="authorBioField" [(ngModel)]="authorBiography"></textarea>
             <br>
             <div class="row text-center">
               <div class="col-sm-6">
@@ -89,23 +89,11 @@
               <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
               <div class="row">
                <div class="collg-6 col-sm-6 col-12">
-                <select class="form-control" [(ngModel)]="bookCategory">
+                   <input class="form-control" id="categoryField" [(ngModel)]="bookCategory" autofocus="autofocus"/>
+                <!-- <select class="form-control" [(ngModel)]="bookCategory">
                   <option value="">Select</option>
-                  <option value="Action and adventure">Action and adventure</option>
-                  <option value="Art">Art</option>
-                  <option value="Biography">Biography</option>
-                  <option value="Health">Health</option>
-                  <option value="cooking">cooking</option>
-                  <option value="History">History</option>
-                  <option value="crime">crime</option>
-                  <option value="Drama">Drama</option>
-                  <option value="Horror">Horror</option>
-                  <option value="Comedy">Comedy</option>
-                  <option value="Thriller">Thriller</option>
-                  <option value="Romance">Romance</option>
-                  <option value="Personality Development">Personality Development</option>
-                  <option value="Sci-Fic<">Sci-Fic</option>
-                </select>
+                  <option value="{{itemCategory}" *ngFor="let itemCategory of bookCategoryArray">{{itemCategory}}</option>
+                </select> -->
                </div>
               </div>
               
@@ -113,10 +101,11 @@
               <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
               <div class="row">
                   <div class="col-lg-6 col-sm-6 col-12">
-                   <select class="form-control" [(ngModel)]="bookLang">
+                      <input class="form-control" id="langField" autofocus="autofocus" [(ngModel)]="bookLang"/>
+                   <!-- <select class="form-control" >
                      <option value="">Select</option>
                      <option value="English">English</option>
-                   </select>
+                   </select> -->
                   </div>
                  </div>
                  <div class="form-group">
@@ -124,12 +113,7 @@
               <p>press the Esc key before opening the menu.) Press Ctrl + PrtScn keys. This captures the entire screen, including the open menu. Select Mode (in older versions, select the arrow next to the New button), </p>
               <div class="row">
                   <div class="collg-6 col-sm-6 col-12">
-                   <select class="form-control"  [(ngModel)]="bookAudience">
-                     <option value="">Select</option>
-                     <option value="Kids">Kids</option>
-                     <option value="Teenage">Teenage</option>
-                     <option value="Adult">Adult</option>
-                   </select>
+                      <input  class="form-control"  [(ngModel)]="bookAudience" id="audienceField" />
                   </div>
                  </div>
                 </div>
