@@ -20,7 +20,7 @@ import { SendforReviewComponent } from './components/bookPublishing/sendfor-revi
 
 // Route Configuration
 export const routes: Routes = [
-    { path: '', component: LoginComponent },
+    { path: '', component: DashboardComponent },
     { path: 'login', component: LoginComponent },
     { path: 'header', component: HeaderComponent },
     { path: 'footer', component: FooterComponent },

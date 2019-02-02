@@ -18,7 +18,7 @@
                                                         <div class="pricesection col-lg-8 col-xl-8 col-7">
                                                           <span class="subtitlevalue text-secondary">Total Unpaid Earnings</span>
                                                           <br>
-                                                          <span class="value text-dark"><strong><i class="fa fa-inr" aria-hidden="true"></i> &nbsp; 0.00 </strong></span>
+                                                          <span class="value text-dark"><strong><i class="fa fa-btc" aria-hidden="true"></i> &nbsp; 0.00 </strong></span>
                                                         </div>
                                                         <div class="iconsection col-lg-4 col-xl-4 col-5">
                                                           <span class="text-secondary"><i class="fa fa-money fa-4x" aria-hidden="true"></i></span>
@@ -88,14 +88,14 @@
                                                     <div class="pricesection col-lg-8 col-xl-8 col-7">
                                                       <span class="subtitlevalue text-secondary">Earnings Due</span>
                                                       <br>
-                                                      <span class="value text-dark"><strong><i class="fa fa-inr" aria-hidden="true"></i> &nbsp; 0.00</strong></span>
+                                                      <span class="value text-dark"><strong><i class="fa fa-btc" aria-hidden="true"></i> &nbsp; 0.00</strong></span>
                                                       
                                                     </div>
                                                     <div class="iconsection col-lg-4 col-xl-4 col-5">
                                                       <span class="text-secondary"><i class="fa fa-hourglass-half fa-4x" aria-hidden="true"></i></span>
                                                       
                                                     </div>
-                                                    <span class="subtitle text-secondary">Minimum earnings to initiate payout - <i class="fa fa-inr" aria-hidden="true"></i > 100</span>
+                                                    <span class="subtitle text-secondary">Minimum earnings to initiate payout - <i class="fa fa-btc" aria-hidden="true"></i > 100</span>
                                                   </div>
                                             </div>
                                     </div>
@@ -142,7 +142,7 @@
                                       <a>
                                         <span class="font-weight-light"><i  class="fa fa-bullhorn fa-4x"></i></span>
                                         <h3 class="title">Refer a Friend</h3>
-                                        <h4 class="subtitle"> Click here to start a new book</h4>
+                                        <!-- <h4 class="subtitle"> Click here to start a new book</h4> -->
                                       </a>
                                       </div>
                                   </div>
@@ -153,7 +153,7 @@
                     </div>
                 </div>
           </div>
-          <div class="booksSection opacityCls" style="margin-top:45px;">
+          <div class="booksSection opacityCls" style="margin-top:45px;margin-bottom: 25px;">
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                  <h1 class="title">Books you've written</h1>
@@ -162,7 +162,7 @@
 
                   </div>
               </div>
-              <div style="margin-top:10px;" class="row" *ngFor="let books of booksWritten; let i = index">
+              <!-- <div style="margin-top:10px;" class="row" *ngFor="let books of booksWritten; let i = index">
                <div class="col-lg-12 col-sm-12 col-12">
                  <div class="card">
                   <div class="card-body">
@@ -227,6 +227,22 @@
                  </div>
                  
                </div>
+              </div> -->
+              <div class="row" *ngFor="let item of booksWrittenList" style="margin-top:10px;">
+                  <div class="col-md-6 col-lg-2">
+                    <div class="card"><img alt="Card image cap" class="card-img-top img-fluid" src="img/brownie.jpg" />
+                      <div class="card-block">
+                          <h5 class="card-title">Black Cherry</h5>
+                          <h6>wqsd</h6>
+                         <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
-          </div>
          </div>

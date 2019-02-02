@@ -10,12 +10,32 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
   today = new Date();
   booksWritten: any[] ;
+  booksWrittenList: any[];
   constructor(private router: Router) { }
 
   ngOnInit() {
     const bookgetData = JSON.parse(localStorage.getItem('booksArray'));
     this.booksWritten = bookgetData;
     console.log(bookgetData);
+    this.booksWrittenList = [{ 'row1': [
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' }
+                                        ]
+                              },
+                             { 'row2': [
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' },
+                                         {'img': '', 'bookname': '', 'author': 'Mustang' }
+                                       ]
+                             }
+                            ];
    $(function() {
 
    });
