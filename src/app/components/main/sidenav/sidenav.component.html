@@ -1,11 +1,14 @@
 <div class="sidenav">
   <div class="logoimg">
-      <h2 class=" navbar-brand text-light" ><span class="sidebar-nav-mini-hide"><i class="fa fa-cube"></i> Evoque<strong>Demo</strong></span></h2>
+      <h2 class=" navbar-brand text-light" ><span class="sidebar-nav-mini-hide"><img style="height:90px;border-radius:50%" src="../../../../assets/images/logo.jpg"></span></h2>
       <a routerLink="/dashboard"> <span><i class="fa fa-chevron-left" aria-hidden="true"></i> BACK TO DASHBOARD</span></a>
       <p class="booktitle"> BOOK - {{bookTitle}}</p>
   </div>
-  <a  class="" routerLink="/titleinformation"> <span><i  class="fa" [ngClass]="{'fa-check-circle': titleInfo == true, 'text-success': titleInfo == true, 'fa-times-circle': titleInfo == false , 'text-danger': titleInfo == false}" aria-hidden="true"></i> Title Information</span></a>
-  <a routerLink="/coverDesign"><span><i  class="fa" [ngClass]="{'fa-check-circle': coverDesign == true, 'text-success': coverDesign == true, 'fa-times-circle': coverDesign == false , 'text-danger': coverDesign == false}" aria-hidden="true"></i> Cover Design</span></a>
-  <a routerLink="/sendReview"><span><i  class="fa" [ngClass]="{'fa-check-circle': sendReview == true, 'text-success': sendReview == true, 'fa-times-circle': sendReview == false , 'text-danger': sendReview == false}" aria-hidden="true"></i> Send for Review</span> </a>
-  <a routerLink="/finished"><span><i  class="fa" [ngClass]="{'fa-check-circle': finish == true, 'text-success': finish == true, 'fa-times-circle': finish == false , 'text-danger': finish == false}" aria-hidden="true"></i> Finished</span>  </a>
+  <div style="margin-top:90px">
+      <a  class="" routerLink="/titleinformation"> <span><i  class="fa" [ngClass]="{'fa-check-circle': titleInfo == true, 'text-success': titleInfo == true, 'fa-times-circle': titleInfo == false , 'text-danger': titleInfo == false}" aria-hidden="true"></i> Title Information</span></a>
+      <a routerLink="/coverDesign"><span><i  class="fa" [ngClass]="{'fa-check-circle': coverDesign == true, 'text-success': coverDesign == true, 'fa-times-circle': coverDesign == false , 'text-danger': coverDesign == false}" aria-hidden="true"></i> Cover Design</span></a>
+      <a routerLink="/sendReview"><span><i  class="fa" [ngClass]="{'fa-check-circle': sendReview == true, 'text-success': sendReview == true, 'fa-times-circle': sendReview == false , 'text-danger': sendReview == false}" aria-hidden="true"></i> Send for Review</span> </a>
+      <a routerLink="/finished"><span><i  class="fa" [ngClass]="{'fa-check-circle': finish == true, 'text-success': finish == true, 'fa-times-circle': finish == false , 'text-danger': finish == false}" aria-hidden="true"></i> Finished</span>  </a>
+  </div>
+  
 </div>

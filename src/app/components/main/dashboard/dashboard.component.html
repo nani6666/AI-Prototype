@@ -228,12 +228,31 @@
                  
                </div>
               </div> -->
-              <div class="row" *ngFor="let item of booksWrittenList" style="margin-top:10px;">
-                  <div class="col-md-6 col-lg-2">
-                    <div class="card"><img alt="Card image cap" class="card-img-top img-fluid" src="img/brownie.jpg" />
+              <div class="row" >
+                  <div class="col-md-6 col-lg-2" *ngFor="let row1 of booksWrittenListRow1" style="margin-top:15px;">
+                    <div class="card cardheight">
+                      <img alt="Card image cap" class="card-img-top img-fluid" src="{{row1.img}}" />
                       <div class="card-block">
-                          <h5 class="card-title">Black Cherry</h5>
-                          <h6>wqsd</h6>
+                          <h6 class="card-title">{{row1.bookname}}</h6>
+                          <h6>{{row1.author}}</h6>
+                         <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                         </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row" >
+                  <div class="col-md-6 col-lg-2" *ngFor="let row2 of booksWrittenListRow2" style="margin-top:15px;">
+                    <div class="card cardheight">
+                      <img alt="Card image cap" class="card-img-top img-fluid" src="{{row2.img}}" />
+                      <div class="card-block">
+                          <h6 class="card-title">{{row2.bookname}}</h6>
+                          <h6>{{row2.author}}</h6>
                          <div>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>

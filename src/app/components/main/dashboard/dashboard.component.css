@@ -128,9 +128,13 @@ p {
  }
  .card-img-top {
     width: 100%;
-    height: 12vw;
+    height: 17vw;
     object-fit: cover;
 }
 .checked {
     color: orange;
+  }
+
+  .cardheight{
+      height: 350px;
   }
